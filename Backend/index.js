@@ -11,6 +11,7 @@ app.use(cors({origin:"*"}))
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use("/users", userRoutes)
+// app.use("/users", userRoutes)
 
 connectDB()
 app.listen(12000, ()=>{
