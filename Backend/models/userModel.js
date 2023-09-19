@@ -2,11 +2,11 @@ import mongoose from "mongoose";
 import bcryptjs from "bcryptjs"
 
 const userSchema = new mongoose.Schema({
-    firstName :{type:String, required:true,trim:true},
-    lastName :{type:String, required:true,trim:true},
-    email :{type:String, required:true, trim:true, unique:true},
-    password:{type:String, required:true,trim:true},
-})
+  firstName: { type: String, required: true, trim: true },
+  lastName: { type: String, required: true, trim: true },
+  email: { type: String, required: true, trim: true, unique: true },
+  password: { type: String, required: true, trim: true },
+});
 
 userSchema.pre("save", async function(next){
 
@@ -26,4 +26,4 @@ userSchema.pre("save", async function(next){
 
 const userModel = mongoose.models.user_tbs || mongoose.model("user_tbs", userSchema)
 
-export{userModel}
+export { userModel };

@@ -12,4 +12,6 @@ userRoutes.post("/forgotpassword", forgotPassword)
 userRoutes.post("/resetpassword", resetPassword)
 userRoutes.post("/upload", uploadImage)
 
-export {userRoutes}
+userRoutes.post("/login", login);
+
+export { userRoutes };
